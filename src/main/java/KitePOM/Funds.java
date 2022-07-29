@@ -23,7 +23,7 @@ public class Funds {
 	@FindBy (xpath = "//input[@id='addfunds_vpa']") private WebElement virtualPaymentField;
 	
 	
-	
+	// this is constructor
 		public Funds(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 			}
