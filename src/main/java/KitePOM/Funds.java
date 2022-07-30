@@ -24,6 +24,7 @@ public class Funds {
 	
 	
 	// this is constructor
+	//second line added
 		public Funds(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 			}
