@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import BaseANDUtility.Base;
 import BaseANDUtility.Utility;
-import KitePOM.Funds;
+import KitePOM.AddFunds;
 import KitePOM.HomePage;
 import KitePOM.PinPage;
 import KitePOM.loginPage;
@@ -22,7 +22,7 @@ public class TC_002 extends Base {
 	PinPage pin;
 	Actions act;
 	HomePage home;
-	Funds fund;
+	AddFunds fund;
 	SoftAssert soft;
 	@Parameters("browsername")
 	@BeforeClass
@@ -40,7 +40,7 @@ public class TC_002 extends Base {
 		login = new loginPage(driver);
 		pin = new PinPage(driver);
 		home = new HomePage(driver);
-		fund = new Funds(driver);
+		fund = new AddFunds(driver);
 		act = new Actions(driver);
 		soft = new SoftAssert();
 		

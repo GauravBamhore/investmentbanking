@@ -14,7 +14,7 @@ public class Base {
 	
 	public void chromeBrowser() throws IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Testing Class Notes\\Project\\InvestmentBankingProjectVER.1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\Drivers\\chromedriver.exe");
 	    ChromeOptions option = new ChromeOptions();
 	    option.addArguments("--disable-notifications");
 	    option.addArguments("--start-maximized");
@@ -23,7 +23,7 @@ public class Base {
 	}
 	public void fireFoxBrowser() throws IOException
 	{
-		System.setProperty("webdriver.gecko.driver", "C:\\Testing Class Notes\\Project\\InvestmentBankingProjectVER.1\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\Drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get(Utility.fetchDFMypropertyFile("URL"));
 		
