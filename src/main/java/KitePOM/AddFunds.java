@@ -28,7 +28,7 @@ public class AddFunds {
 		public AddFunds(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 			}
-		
+	//handling window	
 	public void windowHandle(WebDriver driver)
 	{
 	Set<String> windows = driver.getWindowHandles();
