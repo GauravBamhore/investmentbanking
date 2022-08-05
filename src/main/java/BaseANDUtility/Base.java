@@ -12,6 +12,7 @@ public class Base {
 
 	protected static WebDriver driver;
 	
+	//code for chromedriver
 	public void chromeBrowser() throws IOException
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\Drivers\\chromedriver.exe");
