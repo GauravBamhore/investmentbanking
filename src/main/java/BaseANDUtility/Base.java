@@ -22,6 +22,7 @@ public class Base {
 		driver = new ChromeDriver(option);
 		driver.get(Utility.fetchDFMypropertyFile("URL"));
 	}
+	//code for chromedriver
 	public void fireFoxBrowser() throws IOException
 	{
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\Drivers\\geckodriver.exe");
