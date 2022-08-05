@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 *.properties
 /target/
+=======
+/target/
+prop.properties
+>>>>>>> ib

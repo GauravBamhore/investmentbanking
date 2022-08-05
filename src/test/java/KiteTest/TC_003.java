@@ -1,8 +1,6 @@
 package KiteTest;
 
 import java.io.IOException;
-
-
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -11,19 +9,21 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import BaseANDUtility.Base;
 import BaseANDUtility.Utility;
-import KitePOM.AddFunds;
 import KitePOM.HomePage;
 import KitePOM.PinPage;
+import KitePOM.WithdrawFunds;
 import KitePOM.loginPage;
 
-public class TC_002 extends Base {
+public class TC_003 extends Base {
  
+	
 	loginPage login;
 	PinPage pin;
 	Actions act;
 	HomePage home;
-	AddFunds fund;
+	WithdrawFunds fund;
 	SoftAssert soft;
+	
 	@Parameters("browsername")
 	@BeforeClass
 	public void browserlaunching(String name) throws IOException
@@ -40,7 +40,7 @@ public class TC_002 extends Base {
 		login = new loginPage(driver);
 		pin = new PinPage(driver);
 		home = new HomePage(driver);
-		fund = new AddFunds(driver);
+		fund= new WithdrawFunds(driver);
 		act = new Actions(driver);
 		soft = new SoftAssert();
 		
@@ -58,30 +58,27 @@ public class TC_002 extends Base {
 	}
 	
 	@Test
-      public void fundsWindowValidation() {
+      public void fundsWithdrawalValidation() throws IOException, InterruptedException {
 		
 		fund.clickOnFundsTab();
-		fund.clickOnAddFundsTab();
-		fund.windowHandle(driver);
-		
+		fund.clickOnWithdrawnFundTab();
 		Utility.impWait(4);
-		soft.assertEquals(fund.validatingPageHeading(), "Deposit funds", "The page heading is Not matching");
-		soft.assertEquals(fund.validatingClientName(), "Gaurav Beniram Bamhore", "The client name is Not matching");
-		soft.assertEquals(fund.validatingClientID(), "VLE690", "The client ID is Not matching");
-		
-		//Entering amount to be added
-		fund.enterAmount();
-		soft.assertTrue(fund.validatingSegment(), " The segment content is not matching");
-		soft.assertTrue(fund.validatingAccount(), "The account name is Not matching");
-		fund.clickOnRadioButton();
-		soft.assertFalse(fund.validatingVirtualPaymentField(), "The virtual payment option is showing even after selecting net banking option");
+		fund.windowHandle(driver);
+		Utility.expwait("//input[@name='eqWithdrawalValue']");
+		fund.enterWithdrawalAmount(Utility.fetchDFMypropertyFile("WithdrawalAmount"));
 		fund.clickOnContinueButton();
+		soft.assertTrue(fund.withdrwalBlockPresence(), "The withdrwal block is not showing after clicking on continue button");
+		soft.assertAll();	
 		
-		//fetching title of bank page
-		soft.assertEquals(fund.getTitle(driver), "STATE BANK OF INDIA","error message is not generating");
-		soft.assertAll();
+		
+		
+		
 		
   }
-}	
 	
-
+	
+	
+	
+	
+	
+}

@@ -22,7 +22,7 @@ public class Utility extends Base {
 		public static String fetchDFMypropertyFile(String key) throws IOException
 		{
 			Properties prop = new Properties();
-			FileInputStream fis= new FileInputStream("C:\\Users\\bamho\\eclipse-workspace\\InvestmentBankingProject\\myProperties.properties");
+			FileInputStream fis= new FileInputStream("C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\prop.properties");
 			prop.load(fis);
 			String value = prop.getProperty(key);
 			return value;
@@ -32,13 +32,20 @@ public class Utility extends Base {
 		{
 			 File tempMemory = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			 String str = RandomString.make(4);
-			 File localDrive= new File("C:\\Users\\bamho\\eclipse-workspace\\InvestmentBankingProjectVER.1\\Screenshot\\myScreenshot"+TCID+""+str+".png");
+			 File localDrive= new File("C:\\Users\\bamho\\eclipse-workspace\\investmentbanking\\ScreenShots"+TCID+""+str+".png");
 			 FileHandler.copy(tempMemory, localDrive);
 		}
 		
 		public static void impWait(int time)
 		{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));
+		}
+		
+		public static void expwait(String path) {
+			
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
+			
 		}
 		
 		public static void scrollingToEndPage()

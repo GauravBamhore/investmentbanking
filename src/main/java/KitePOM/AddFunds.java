@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Funds {
+public class AddFunds {
 
 	@FindBy (xpath = "//span[normalize-space()='Funds']") private WebElement fundtab;
 	@FindBy (xpath = "//button[@type='button']") private WebElement addFundTab;
@@ -23,11 +23,11 @@ public class Funds {
 	@FindBy (xpath = "//input[@id='addfunds_vpa']") private WebElement virtualPaymentField;
 	
 	
-	// this is constructor
-		public Funds(WebDriver driver) {
+		public AddFunds(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 			}
 		
+	//handling window	
 	public void windowHandle(WebDriver driver)
 	{
 	Set<String> windows = driver.getWindowHandles();
@@ -92,9 +92,11 @@ public class Funds {
 		return vpf;
 	}
 	
+	
 	public void clickOnRadioButton()
 	{
 		radioButton.click();
+	
 	}
 	public void clickOnContinueButton()
 	{
