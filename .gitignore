@@ -1,1 +1,2 @@
-myProperties.properties
+/target/
+prop.properties
