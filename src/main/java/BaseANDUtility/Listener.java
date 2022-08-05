@@ -10,7 +10,7 @@ import org.testng.Reporter;
 
 public class Listener extends Base implements ITestListener {
 
-	
+	// for printing results on getting failure
 	public void onTestFailure(ITestResult result) {
 		try {
 			Utility.captureScreenShot(result.getName());
