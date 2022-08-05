@@ -16,7 +16,7 @@ public class WithdrawFunds {
 	@FindBy (xpath = "//div[@class='modal-body']") private WebElement equityWithdrawalBlock;
 	
 	
-	
+			//specifying constructor
 			public WithdrawFunds(WebDriver driver)
 			{
 				PageFactory.initElements(driver, this);
