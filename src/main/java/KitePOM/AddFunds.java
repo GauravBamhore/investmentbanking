@@ -22,14 +22,11 @@ public class AddFunds {
 	@FindBy (xpath = "//select[@id='account_select']") private WebElement account;
 	@FindBy (xpath = "//input[@id='addfunds_vpa']") private WebElement virtualPaymentField;
 	
-	// this is constructor
-	//second line added
-	// third line of comment
-	// fourth line of comment
-	// fifth line of comment
+	
 		public AddFunds(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 			}
+		
 	//handling window	
 	public void windowHandle(WebDriver driver)
 	{
@@ -95,9 +92,11 @@ public class AddFunds {
 		return vpf;
 	}
 	
+	
 	public void clickOnRadioButton()
 	{
 		radioButton.click();
+	
 	}
 	public void clickOnContinueButton()
 	{

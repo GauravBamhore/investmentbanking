@@ -68,8 +68,10 @@ public class TC_003 extends Base {
 		fund.enterWithdrawalAmount(Utility.fetchDFMypropertyFile("WithdrawalAmount"));
 		fund.clickOnContinueButton();
 		soft.assertTrue(fund.withdrwalBlockPresence(), "The withdrwal block is not showing after clicking on continue button");
-		
 		soft.assertAll();	
+		
+		
+		
 		
 		
   }
