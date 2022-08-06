@@ -16,7 +16,7 @@ public class Listener extends Base implements ITestListener {
 			Utility.captureScreenShot(result.getName());
 			Reporter.log(result.getName()+" Has Failed>> Please Troubleshot",true);
 		} catch (IOException e) {
-			
+			//for printing the exception class name, description and stack trace	
 			e.printStackTrace();
 		}
 	}
