@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="KiteTest.TC_003">
+      <class name="KiteTest.TC_001">
         <methods>
-          <include name="fundsWithdrawalValidation"/>
           <include name="browserlaunching"/>
-          <include name="login"/>
+          <include name="validateOrderStatus"/>
+          <include name="LoginIntoTheKite"/>
+          <include name="browserClosing"/>
+          <include name="logoutKiteApp"/>
         </methods>
-      </class> <!-- KiteTest.TC_003 -->
+      </class> <!-- KiteTest.TC_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

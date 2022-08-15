@@ -64,7 +64,7 @@ public class TC_001 extends Base{
 	
   }
   
-  @Test(enabled=false)
+  @Test(enabled=true)
   public void validateOrderStatus() throws InterruptedException, IOException {
 	
 	  
@@ -103,7 +103,7 @@ public class TC_001 extends Base{
 	  soft.assertAll();
 	  
   }
-  @Test
+  @Test(enabled=false)
   public void validateAdditionOfStockInWishlist() throws IOException, InterruptedException
   {
 	  home.stockAdd(act);

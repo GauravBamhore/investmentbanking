@@ -19,6 +19,7 @@ public class Base {
 	    ChromeOptions option = new ChromeOptions();
 	    option.addArguments("--disable-notifications");
 	    option.addArguments("--start-maximized");
+	    
 		driver = new ChromeDriver(option);
 		driver.get(Utility.fetchDFMypropertyFile("URL"));
 	}
