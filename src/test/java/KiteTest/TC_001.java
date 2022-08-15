@@ -39,7 +39,7 @@ public class TC_001 extends Base{
   {
 	  if(name.equals("chrome"))
 	  {
-		  chromeBrowser();//chromebrowser
+		  chromeBrowser();
 	  }
 	  else if (name.equals("firefox"))
 	  {
